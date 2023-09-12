@@ -32,7 +32,7 @@ if uploaded_file is not None:
 
     # 円グラフの表示
     import matplotlib.pyplot as plt
-    import japanize-matplotlib
+    import japanize_matplotlib
     from matplotlib.font_manager import FontProperties
     # 日本語フォントがイマイチ
     plt.rcParams['font.family'] = 'MS Gothic'
