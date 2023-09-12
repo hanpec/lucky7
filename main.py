@@ -31,14 +31,14 @@ if uploaded_file is not None:
     df = pd.DataFrame(data)
 
     # 円グラフの表示
-    # import matplotlib.pyplot as plt
-    # from matplotlib.font_manager import FontProperties
-    # plt.rcParams['font.family'] = 'MS Gothic'
-    # # font_prop = FontProperties(fname="/path/to/your/font.ttf")
-    # fig, ax = plt.subplots(figsize=(20, 20))
-    # ax.pie(df["出現回数"], labels=df["単語/品詞"], startangle=90, counterclock=False, autopct="%1.1f%%")
-    # ax.set_title("単語/品詞出現回数")
-    # st.pyplot(fig)
+    import matplotlib.pyplot as plt
+    from matplotlib.font_manager import FontProperties
+    plt.rcParams['font.family'] = 'MS Gothic'
+    # font_prop = FontProperties(fname="/path/to/your/font.ttf")
+    fig, ax = plt.subplots(figsize=(20, 20))
+    ax.pie(df["出現回数"], labels=df["単語/品詞"], startangle=90, counterclock=False, autopct="%1.1f%%")
+    ax.set_title("単語/品詞出現回数")
+    st.pyplot(fig)
 
     # データフレームの表示
     st.subheader("単語/品詞出現回数一覧")
