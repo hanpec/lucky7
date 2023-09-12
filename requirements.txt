@@ -2,6 +2,7 @@ streamlit
 openpyxl
 pandas
 matplotlib
+japanize-matplotlib
 python-docx
 XlsxWriter
 janome
