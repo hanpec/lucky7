@@ -21,10 +21,13 @@ if uploaded_file is not None:
     tokenizer = Tokenizer()
     tokens = tokenizer.tokenize(text)
 
-    # 単語と品詞のカウント
+    # 名詞、動詞、形容詞の品詞を抽出し、出現回数をカウント
+    selected_pos = ["名詞", "動詞", "形容詞"]
     counter = Counter()
     for token in tokens:
-        counter[token.surface] += 1
+        pos = token.part_of_speech.split(',')[0]
+        if pos in selected_pos:
+            counter[token.surface] += 1
 
     # データフレームに変換
     data = {"単語/品詞": list(counter.keys()), "出現回数": list(counter.values())}
