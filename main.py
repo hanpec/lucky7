@@ -7,7 +7,7 @@ from io import BytesIO
 import base64
 from janome.tokenizer import Tokenizer
 
-st.title("Word文書解析アプリ")
+st.title("Word文書解析")
 uploaded_file = st.file_uploader("ファイルをアップロードしてください。", type=["docx"])
 
 # ファイルがアップロードされた場合
