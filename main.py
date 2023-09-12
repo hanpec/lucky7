@@ -41,6 +41,15 @@ if uploaded_file is not None:
     ax.set_title("単語/品詞出現回数")
     st.pyplot(fig)
 
+    from wordcloud import WordCloud
+    wordcloud = WordCloud(width=800, height=400, background_color='white', font_path='./ipaexg.ttf').generate(text)
+    # ワードクラウドをMatplotlibのプロットとして表示
+    # st.pyplot(plt.figure(figsize=(10, 5)))
+    plt.figure(figsize=(10, 5))
+    plt.imshow(wordcloud, interpolation='bilinear')
+    plt.axis("off")
+    st.pyplot(plt)
+
     # データフレームの表示
     st.subheader("単語/品詞出現回数一覧")
     st.dataframe(df.sort_values("出現回数", ascending=False))

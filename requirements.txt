@@ -6,3 +6,4 @@ japanize-matplotlib
 python-docx
 XlsxWriter
 janome
+wordcloud
