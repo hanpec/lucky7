@@ -1,1 +1,1 @@
-# lucky
+[application url](https://lucky7.streamlit.app/)
